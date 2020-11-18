@@ -1,9 +1,10 @@
 .contacts {
   &__map {
-    padding-top: 140px;
-    text-align: center;
-    min-height: 640px;
     max-width: 1480px;
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 140px;
+    min-height: 640px;
 
     @include r(1230) {
       min-height: auto;
