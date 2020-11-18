@@ -1,0 +1,93 @@
+.preview {
+  background-image: url(../images/preview-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  min-height: 600px;
+
+  &__inner {
+    padding: 0 15px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  &__title {
+    font-size: 200px;
+    line-height: 1.2;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    color: #0D302C;
+
+    @include r(768) {
+      font-size: 100px;
+      text-align: center;
+    }
+
+    @include r(414) {
+      font-size: 64px;
+    }
+
+    span {
+      display: block;
+      font-family: 'RCondensed', sans-serif;
+      font-weight: 400;
+      font-size: 24px;
+      color: #000;
+      text-align: center;
+
+      @include r(768) {
+        font-size: 18px;
+      }
+
+      @include r(414) {
+        font-size: 14px;
+      }
+    }
+  }
+
+  &__scroll {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 20px;
+    display: block;
+    width: 20px;
+    height: 68px;
+    fill: #fff;
+    transition: fill .2s ease-in;
+    cursor: pointer;
+    animation: 2s scrollArrow infinite;
+
+    @media (min-height: 600px) {
+      bottom: 90px;
+    }
+    @include rmin(1366) {
+      &:hover {
+        fill: $green;
+      }
+    }
+
+    &:active {
+      fill: $green;
+    }
+  }
+}
+
+
+@keyframes scrollArrow {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-15px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}

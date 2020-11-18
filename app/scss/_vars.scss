@@ -1,0 +1,25 @@
+$black: #242121;
+$green: #00B2A0;
+$block-margin-lg: 170px;
+$block-margin-md: 120px;
+$block-margin-sm: 60px;
+$section-padding-lg: 160px 0;
+$section-padding-md: 120px 0;
+$section-padding-sm: 60px 0;
+
+@mixin reset {
+    padding: 0;
+    margin: 0;
+}
+
+@mixin r($width) {
+    @media only screen and (max-width: $width+ "px") {
+        @content;
+    }
+}
+
+@mixin rmin($width) {
+    @media only screen and (min-width: $width+ "px") {
+        @content;
+    }
+}

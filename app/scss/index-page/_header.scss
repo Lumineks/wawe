@@ -1,0 +1,127 @@
+.header {
+  position: absolute;
+  z-index: 50;
+  top: 52px;
+  width: 100%;
+
+  &__inner {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 400;
+    font-size: 24px;
+    color: #fff;
+
+    @include r(1230) {
+      justify-content: space-between;
+    }
+  }
+
+  &__logo {
+    position: absolute;
+    left: 0;
+
+    @include r(1230) {
+      position: static;
+    }
+  }
+
+  &__menu {
+    @include r(768) {
+      position: fixed;
+      left: 0;
+      top: -100%;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(#000, .7);
+      transition: top .3s ease-in-out;
+      
+      &.visible {
+        top: 0;
+      }
+    }
+  }
+
+  &__list {
+    display: flex;
+
+    @include r(768) {
+      height: 100%;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 45px;
+
+      @include r(990) {
+        margin-right: 25px;
+      }
+
+      @include r(768) {
+        margin-right: 0;
+        margin-bottom: 30px;
+      }
+    }
+  }
+
+  &__link {
+    display: inline-block;
+    padding-bottom: 5px;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 1px;
+      opacity: 0;
+      background-color: $green;
+      transition: opacity .3s;
+    }
+
+    &:hover {
+      &::before {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__burger {
+    display: none;
+
+    @include r(768) {
+      display: block;
+      width: 40px;
+      height: 24px;
+      background-color: transparent;
+      border: none;
+      border-top: 2px solid #fff;
+      border-bottom: 2px solid #fff;
+      outline: transparent;
+      position: relative;
+      transition: transform .2s ease-in;
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 100%;
+        height: 2px;
+        background-color: #fff;
+      }
+
+      &.active {
+        transform: rotate(90deg);
+      }
+    }
+  }
+}

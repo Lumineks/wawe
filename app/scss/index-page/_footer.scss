@@ -1,0 +1,15 @@
+.footer {
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $green;
+
+  @include r(768) {
+    height: 160px;
+  }
+
+  @include r(414) {
+    height: 100px;
+  }
+}

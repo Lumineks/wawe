@@ -1,0 +1,119 @@
+.blog {
+  &__title {
+    padding: 0 15px;
+    margin-bottom: 225px;
+
+    @include r(1230) {
+      margin-bottom: $block-margin-lg;
+    }
+
+    @include r(990) {
+      margin-bottom: $block-margin-md;
+    }
+
+    @include r(768) {
+      margin-bottom: $block-margin-sm;
+    }
+  }
+
+  &__slide {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 800px;
+    color: #fff;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    @include r(768) {
+      min-height: 500px;
+    }
+
+    @media (max-height: 500px) {
+      min-height: 380px;
+    }
+  }
+
+  &__slide-title {
+    max-width: 590px;
+    margin-left: 50%;
+    margin-top: -35px;
+
+    @include r(630) {
+      max-width: 100%;
+      margin-left: 0;
+      text-align: center;
+      padding: 0 30px;
+    }
+  }
+
+  &__link {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 1.2;
+
+    @include r(630) {
+      font-size: 12px;
+    }
+
+    span {
+      display: block;
+      font-weight: 400;
+      font-size: 48px;
+      line-height: 56px;
+      text-transform: uppercase;
+
+      @include r(990) {
+        font-size: 36px;
+        line-height: 1.2;
+      }
+
+      @include r(768) {
+        font-size: 24px;
+      }
+
+      @include r(630) {
+        font-size: 18px;
+      }
+    }
+  }
+
+  .swiper-container-horizontal>.swiper-pagination-bullets {
+    bottom: 70px;
+
+    @include r(414) {
+      bottom: 50px;
+    }
+
+    @media (max-height: 500px) {
+      bottom: 30px;
+    }
+  }
+
+  .swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet {
+    margin: 0;
+
+    &:not(:last-child) {
+      margin-right: 15px;
+    }
+  }
+
+  .swiper-pagination-bullet {
+    opacity: 1;
+    background: #fff;
+    width: 15px;
+    height: 15px;
+    outline: transparent;
+    transition: background .3s;
+
+    @include r(768) {
+      width: 10px;
+      height: 10px;
+    }
+  }
+
+  .swiper-pagination-bullet-active {
+    background: $green;
+  }
+}

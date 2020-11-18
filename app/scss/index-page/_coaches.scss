@@ -1,0 +1,87 @@
+.coaches {
+  &__inner {
+    position: relative;
+    padding-top: 157px;
+    min-height: 806px;
+
+    @include r(1230) {
+      min-height: auto;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    @include r(768) {
+      flex-wrap: wrap;
+      padding-top: 80px;
+    }
+  }
+
+  &__item {
+    max-width: 515px;
+
+    @include r(1230) {
+      margin-right: 60px;
+    }
+
+    @include r(990) {
+      max-width: 370px;
+    }
+
+    @include r(768) {
+      max-width: 100%;
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 40px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 100px;
+
+    @include r(1230) {
+      text-align: right;
+      margin-bottom: $block-margin-sm;
+    }
+
+    @include r(990) {
+      text-align: left;
+    }
+  }
+
+  &__text {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__image {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    min-width: 960px;
+    height: 100%;
+
+    @include r(1600) {
+      max-width: 50vw;
+      min-width: auto;
+      height: auto;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    @include r(1230) {
+      position: static;
+      transform: none;
+    }
+
+    @include r(768) {
+      display: block;
+      margin: 0 auto;
+      max-width: 70%;
+    }
+
+    @include r(414) {
+      max-width: 100%;
+    }
+  }
+}

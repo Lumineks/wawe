@@ -1,0 +1,120 @@
+.service {
+  background-color: #F8F8F8;
+
+  &__inner {
+    padding: 208px 0 192px;
+
+    @include r(1230) {
+      padding: $section-padding-lg;
+    }
+
+    @include r(990) {
+      padding: $section-padding-md;
+    }
+
+    @include r(768) {
+      padding: $section-padding-sm;
+    }
+  }
+
+  &__title {
+    margin-bottom: 204px;
+
+    @include r(1230) {
+      margin-bottom: $block-margin-lg;
+    }
+
+    @include r(990) {
+      margin-bottom: $block-margin-md;
+    }
+
+    @include r(768) {
+      margin-bottom: $block-margin-sm;
+    }
+  }
+
+  &__items {
+    display: flex;
+    justify-content: space-between;
+
+    @include r(990) {
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    min-height: 577px;
+    max-width: 360px;
+    width: 100%;
+    padding: 45px 21px 41px 42px;
+    background-color: #fff;
+    font-weight: 400;
+
+    @include r(990) {
+      max-width: 45%;
+    }
+
+    @include r(768) {
+      max-width: 100%;
+      text-align: center;
+      min-height: 500px;
+    }
+
+    &:not(:last-child) {
+      margin-right: 60px;
+
+      @include r(1230) {
+        margin-right: 15px;
+      }
+
+      @include r(990) {
+        margin-right: 0;
+        margin-bottom: 40px;
+      }
+    }
+  }
+
+  &__item-title {
+    text-align: center;
+    margin-bottom: 60px;
+    font-size: 36px;
+    color: #01353E;
+
+    @include r(414) {
+      font-size: 24px;
+      margin-bottom: 40px;
+    }
+  }
+
+  &__list-item {
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+
+    &:last-child {
+      margin-bottom: 50px;
+
+      @include r(768) {
+        margin-bottom: 30px;
+      }
+    }
+  }
+
+  &__price {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: auto;
+    font-weight: 400;
+    font-size: 36px;
+    color: #01353E;
+
+    span {
+      margin-left: 5px;
+      font-size: 18px;
+    }
+  }
+}

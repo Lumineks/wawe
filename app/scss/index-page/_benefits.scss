@@ -1,0 +1,180 @@
+.benefits {
+  background-color: #F8F8F8;
+
+  &__inner {
+    padding: 200px 0;
+
+    @include r(990) {
+      padding: 150px 0;
+    }
+
+    @include r(768) {
+      padding: 60px 0;
+    }
+  }
+
+  &__title {
+    margin-bottom: 100px;
+
+    @include r(768) {
+      margin-bottom: $block-margin-sm;
+    }
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 102px;
+
+    @include r(990) {
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+
+    @include r(630) {
+      justify-content: flex-start;
+      margin-bottom: 70px;
+    }
+  }
+
+  &__item {
+    max-width: 350px;
+
+    @include r(1230) {
+      max-width: 280px;
+    }
+
+    @include r(990) {
+      max-width: 45%;
+      width: 100%;
+    }
+
+    @include r(630) {
+      max-width: 100%;
+    }
+
+    &:not(:last-child) {
+      margin-right: 30px;
+      margin-bottom: 70px;
+    }
+  }
+
+  &__item-title {
+    display: flex;
+    align-items: center;
+    margin-bottom: 6px;
+    max-width: 150px;
+    min-height: 56px;
+    margin-right: 70px;
+    margin-left: auto;
+    font-weight: 400;
+    font-size: 24px;
+    text-transform: uppercase;
+    color: $black;
+    position: relative;
+
+    @include r(990) {
+      margin-right: calc(50% - 90px);
+    }
+
+    @include r(630) {
+      margin-right: auto;
+      margin-left: 0;
+      padding-left: 65px;
+      max-width: 100%;
+    }
+
+    @include r(414) {
+      font-size: 18px;
+      padding-left: 45px;
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    right: calc(100% + 10px);
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+
+    @include r(630) {
+      right: auto;
+      left: 0;
+    }
+
+    @include r(414) {
+      width: 30px;
+      height: 30px;
+    }
+  }
+
+  &__descr {
+    display: flex;
+    justify-content: space-between;
+
+    @include r(630) {
+      flex-direction: column;
+    }
+  }
+
+  &__box {
+    max-width: 600px;
+
+    &:not(:last-child) {
+      margin-right: 20px;
+
+      @include r(630) {
+        margin-right: 0;
+        margin-bottom: 30px;
+      }
+    }
+  }
+
+  &__row {
+    display: flex;
+    align-items: center;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 1;
+  }
+
+  &__progress {
+    margin-bottom: 10px;
+  }
+
+  &__progress-line {
+    height: 15px;
+    margin-right: 10px;
+
+    &--sm {
+      width: 200px;
+
+      @include r(414) {
+        width: 150px;
+      }
+    }
+
+    &--md {
+      width: 247px;
+
+      @include r(414) {
+        width: 197px;
+      }
+    }
+
+    &--lg {
+      width: 293px;
+
+      @include r(414) {
+        width: 243px;
+      }
+    }
+  }
+
+  &__text {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+}
